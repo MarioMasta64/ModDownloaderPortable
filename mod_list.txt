@@ -35,6 +35,6 @@ mod_list.txt
 doc\
 https://github.com/MarioMasta64/ModDownloaderPortable/
 move-to
--
+Feel Free To Email It To Me Or Find Me On Social Media
 MarioMasta64
 loveme0198@gmail.com
