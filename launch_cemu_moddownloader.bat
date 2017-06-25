@@ -14,7 +14,7 @@ cls
 
 if exist mod_list.txt del mod_list.txt
 if not exist .\bin\wget.exe call :Download-Wget
-.\bin\wget.exe -q --show-progress https://github.com/MarioMasta64/ModDownloaderPortable/raw/master/mod_list.txt
+.\bin\wget.exe -q --show-progress https://raw.githubusercontent.com/MarioMasta64/ModDownloaderPortable/master/mod_list.txt
 if not exist mod_list.txt goto OFFLINE
 
 cls
@@ -59,9 +59,10 @@ if exist "!mod-filename_%mod%!" del "!mod-filename_%mod%!"
 
 if "!mod-rename-to_%mod%!" NEQ "-" rename "!mod-filename_%mod%!" "!mod-rename-to_%mod%!" & set "file=!mod-rename-to_%mod%!"
 if "!mod-rename-to_%mod%!" EQU "-" set "file=!mod-filename_%mod%!"
-
-if "!mod-action_%mod%!" EQU "move-to" move "!mod-filename_%mod%!" "!mod-folder_%mod%!!mod-rename-to_%mod%!"
+if "!mod-action_%mod%!" EQU "move-to" if not exist "!mod-folder_%mod%!" mkdir "!mod-folder_%mod%!"
+if "!mod-action_%mod%!" EQU "move-to" move "%file%" "!mod-folder_%mod%!%file%"
 if "!mod-action_%mod%!" EQU "extract-zip" call :Extract-Zip & del "%file%"
+
 pause
 
 goto MENU
