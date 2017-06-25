@@ -3,7 +3,7 @@ cls
 setlocal enabledelayedexpansion
 Color 0A
 cls
-title MOD Downloader - Wip v4 - A Stable PoC
+title Mod Downloader - Wip v4 - A Stable PoC
 set nag="Welcome To The Wip v4 - A Stable PoC"
 
 if not exist .\bin\ mkdir .\bin\
