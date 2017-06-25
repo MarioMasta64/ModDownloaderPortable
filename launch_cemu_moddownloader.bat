@@ -22,80 +22,88 @@ goto MENU
 set slot-max=10
 set /a "num=%slot-max%-1"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-title_!counter!=%%i"&set num=0)
 )
 :: Mod Download Link
 set /a "num=%slot-max%-2"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-link_!counter!=%%i"&set num=0)
 )
 :: Mod File-Name
 set /a "num=%slot-max%-3"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-filename_!counter!=%%i"&set num=0)
 )
 :: Mod Rename To
 set /a "num=%slot-max%-4"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-rename-to_!counter!=%%i"&set num=0)
 )
 :: Mod Folder
 set /a "num=%slot-max%-5"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-folder_!counter!=%%i"&set num=0)
 )
 :: Mod Website
 set /a "num=%slot-max%-6"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-website_!counter!=%%i"&set num=0)
 )
 :: Action To Take
 set /a "num=%slot-max%-7"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-action_!counter!=%%i"&set num=0)
 )
 :: Free Space
 set /a "num=%slot-max%-8"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-null1_!counter!=%%i"&set num=0)
 )
 :: Free Space
 set /a "num=%slot-max%-9"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-null2_!counter!=%%i"&set num=0)
 )
 :: Free Space
 set /a "num=%slot-max%-10"
 set "counter=0"
-for /f "DELIMS=" %%i in (test.txt) do (
+for /f "DELIMS=" %%i in (mod_list.txt) do (
     set /a num+=1
     if "!num!"=="%slot-max%" (set /a counter+=1&set "mod-null3_!counter!=%%i"&set num=0)
 )
 exit /b
 
 :MENU
+
+cls
+
+if not exist .\bin\wget.exe call :Download-Wget
+if exist mod_list.txt del mod_list.txt
+.\bin\wget.exe -q --show-progress https://raw.githubusercontent.com/MarioMasta64/ModDownloader/master/mod_list.txt
+
 cls
 echo %nag%
 call :Get-Mod-Info
 For /L %%C in (1,1,%Counter%) Do (echo %%C. !mod-title_%%C! & set max-mod=%%C)
+del mod_list.txt
 set /p mod="choose a mod: "
 :: if "%mod%"=="menu" exit /b 2
 set /a "mod=%mod%"
@@ -125,10 +133,6 @@ echo !mod-null2_%mod%!
 :: Free Space 3
 echo !mod-null3_%mod%!
 pause
-
-cls
-
-if not exist .\bin\wget.exe call :Download-Wget
 
 cls
 

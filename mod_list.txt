@@ -1,0 +1,30 @@
+Cemu Hook 1.8.1+ Only (v0.4.1.1)
+https://files.sshnuke.net/cemuhook_181_0411.zip
+cemuhook_181_0411.zip
+-
+bin\cemu\
+https://sshnuke.net/cemuhook/
+extract-zip
+-
+-
+-
+Cemu Hook 1.7.3-1.8.0 (v0.4.1.0)
+https://files.sshnuke.net/cemuhook_174d_0410.zip
+cemuhook_174d_0410.zip
+-
+bin\cemu\
+https://sshnuke.net/cemuhook/
+extract-zip
+-
+-
+-
+Mod Name
+Mod Download Link
+Mod FileName
+Mod File To Rename To
+Mod Folder
+Mod Website
+Mod Action
+Free Space 1
+Free Space 2
+Free Space 3
