@@ -91,13 +91,45 @@ for /f "DELIMS=" %%i in (mod_list.txt) do (
 )
 exit /b
 
+:OFFLINE
+cls
+echo 1. force update in case you have an old version
+echo 2. exit
+echo you're either offline or you have an outdated version.
+set /p eh="choice: "
+set /a "eh=%eh%"
+if "%eh%"=="1" goto :Update
+if "%eh%"=="2" exit
+goto :OFFLINE
+
+:Update-Now
+cls & if not exist .\bin\wget.exe call :Download-Wget
+cls & title Portable Cemu Mod Downloader Launcher - Experimental Edition - Updating Launcher
+cls & .\bin\wget.exe -q --show-progress https://github.com/MarioMasta64/ModDownloaderPortable/master/launch_cemu_moddownloader.bat
+cls & if exist launch_cemu_moddownloader.bat.1 goto Replacer-Create
+cls & call :OFFLINE
+(goto) 2>nul
+
+:Replacer-Create
+cls
+echo @echo off > replacer.bat
+echo Color 0A >> replacer.bat
+echo del launch_cemu_moddownloader.bat >> replacer.bat
+echo rename launch_cemu_moddownloader.bat.1 launch_cemu_moddownloader.bat >> replacer.bat
+echo start launch_cemu_moddownloader.bat >> replacer.bat
+:: launcher exits, deletes itself, and then exits again. yes. its magic.
+echo (goto) 2^>nul ^& del "%%~f0" ^& exit >> replacer.bat
+wscript "%CD%\bin\hide.vbs" "replacer.bat"
+exit
+
 :MENU
 
 cls
 
-if not exist .\bin\wget.exe call :Download-Wget
 if exist mod_list.txt del mod_list.txt
-.\bin\wget.exe -q --show-progress https://raw.githubusercontent.com/MarioMasta64/ModDownloader/master/mod_list.txt
+if not exist .\bin\wget.exe call :Download-Wget
+.\bin\wget.exe -q --show-progress https://github.com/MarioMasta64/ModDownloaderPortable/master/mod_list.txt
+if not exist mod_list.txt goto OFFLINE
 
 cls
 echo %nag%
