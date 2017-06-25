@@ -28,3 +28,13 @@ Mod Action
 Free Space 1
 Free Space 2
 Free Space 3
+Help Contribute To The Mod List
+https://github.com/MarioMasta64/ModDownloaderPortable/edit/master/mod_list.txt
+mod_list.txt
+-
+doc\
+https://github.com/MarioMasta64/ModDownloaderPortable/
+move-to
+-
+MarioMasta64
+loveme0198@gmail.com
