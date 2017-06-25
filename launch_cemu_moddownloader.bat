@@ -219,6 +219,7 @@ cls
 echo 1. force update in case you have an old version
 echo 2. exit
 echo you're either offline or you have an outdated version.
+echo you can use option d in the cemu menu to redownload me.
 set /p eh="choice: "
 set /a "eh=%eh%"
 if "%eh%"=="1" goto :Update
