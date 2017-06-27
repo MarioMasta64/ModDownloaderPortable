@@ -3,8 +3,8 @@ cls
 setlocal enabledelayedexpansion
 Color 0A
 cls
-title Mod Downloader - Wip v4 - A Stable PoC
-set nag="Welcome To The Wip v4 - A Stable PoC"
+title Mod Downloader - Wip v5 - A Stable PoC
+set nag="Welcome To The Wip v5 - A Stable PoC"
 
 if not exist .\bin\ mkdir .\bin\
 
@@ -217,13 +217,14 @@ exit /b
 
 :OFFLINE
 cls
+cls & title Portable Cemu Mod Downloader Launcher - Experimental Edition - Offline
 echo 1. force update in case you have an old version
 echo 2. exit
 echo you're either offline or you have an outdated version.
 echo you can use option d in the cemu menu to redownload me.
 set /p eh="choice: "
 set /a "eh=%eh%"
-if "%eh%"=="1" goto :Update
+if "%eh%"=="1" goto :Update-Now
 if "%eh%"=="2" exit
 goto :OFFLINE
 
