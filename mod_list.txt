@@ -1,6 +1,6 @@
 Cemu Hook 1.8.1+ Only (v0.4.1.1)
 https://files.sshnuke.net/cemuhook_181b_0440.zip
-cemuhook_181_0411.zip
+cemuhook_181b_0440.zip
 -
 bin\cemu\
 https://sshnuke.net/cemuhook/
