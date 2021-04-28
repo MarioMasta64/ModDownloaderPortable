@@ -1,5 +1,5 @@
 Cemu Hook 1.12.1+ Only (v0.5.7.3)
-ttps://files.sshnuke.net/cemuhook_1159_0573.zip
+https://files.sshnuke.net/cemuhook_1159_0573.zip
 cemuhook_1159_0573.zip
 -
 bin\cemu\
