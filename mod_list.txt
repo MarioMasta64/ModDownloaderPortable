@@ -1,4 +1,14 @@
-Cemu Hook 1.12.1+ Only (v0.5.7.3)
+Cemu Hook 1.25.1+ Only (v0.5.7.3)
+https://files.sshnuke.net/cemuhook_1251c_0575.zip
+cemuhook_1251c_0575.zip
+-
+bin\cemu\
+https://sshnuke.net/cemuhook/
+extract-zip
+-
+-
+-
+Cemu Hook 1.12.1-1.25.0 Only (v0.5.7.3)
 https://files.sshnuke.net/cemuhook_1159_0573.zip
 cemuhook_1159_0573.zip
 -
