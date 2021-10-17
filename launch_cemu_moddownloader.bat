@@ -75,7 +75,7 @@ set folder=%CD%
 if %CD%==%~d0\ set folder=%CD:~0,2%
 echo. > .\bin\extractmod.vbs
 echo 'The location of the zip file. >> .\bin\extractmod.vbs
-echo ZipFile="%CD%\%file%" >> .\bin\extractmod.vbs
+echo ZipFile="%folder%\%file%" >> .\bin\extractmod.vbs
 echo 'The folder the contents should be extracted to. >> .\bin\extractmod.vbs
 echo ExtractTo="%CD%\!mod-folder_%mod%!" >> .\bin\extractmod.vbs
 echo. >> .\bin\extractmod.vbs
