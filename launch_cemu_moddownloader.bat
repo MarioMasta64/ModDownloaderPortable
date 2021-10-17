@@ -77,7 +77,7 @@ echo. > .\bin\extractmod.vbs
 echo 'The location of the zip file. >> .\bin\extractmod.vbs
 echo ZipFile="%folder%\%file%" >> .\bin\extractmod.vbs
 echo 'The folder the contents should be extracted to. >> .\bin\extractmod.vbs
-echo ExtractTo="%CD%\!mod-folder_%mod%!" >> .\bin\extractmod.vbs
+echo ExtractTo="%folder%\!mod-folder_%mod%!" >> .\bin\extractmod.vbs
 echo. >> .\bin\extractmod.vbs
 echo 'If the extraction location does not exist create it. >> .\bin\extractmod.vbs
 echo Set fso = CreateObject("Scripting.FileSystemObject") >> .\bin\extractmod.vbs
