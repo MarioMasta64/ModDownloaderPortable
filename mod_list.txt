@@ -1,4 +1,4 @@
-Cemu Hook 1.25.1+ Only (v0.5.7.3)
+Cemu Hook 1.25.1+ Only (v0.5.7.5)
 https://files.sshnuke.net/cemuhook_1251c_0575.zip
 cemuhook_1251c_0575.zip
 -
