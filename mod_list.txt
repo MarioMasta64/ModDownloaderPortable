@@ -1,3 +1,13 @@
+Current versions
+-
+-
+-
+-
+-
+-
+-
+-
+-
 Cemu Hook 1.25.1+ Only (v0.5.7.7)
 https://files.sshnuke.net/cemuhook_1262d_0577.zip
 cemuhook_1262d_0577.zip
@@ -31,6 +41,26 @@ extract-zip
 Cemu Hook 1.7.3-1.8.0 (v0.4.1.0)
 https://files.sshnuke.net/cemuhook_174d_0410.zip
 cemuhook_174d_0410.zip
+-
+bin\cemu\
+https://sshnuke.net/cemuhook/
+extract-zip
+-
+-
+-
+All versions
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Cemu Hook 1.25.1-1.27.1 (0.5.7.7)
+https://files.sshnuke.net/cemuhook_1262d_0577.zip
+cemuhook_1262d_0577.zip
 -
 bin\cemu\
 https://sshnuke.net/cemuhook/
