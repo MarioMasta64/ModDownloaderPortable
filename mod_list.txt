@@ -18,6 +18,16 @@ Current versions
 -
 -
 -
+-----------------------------------
+-
+-
+-
+-
+-
+-
+-
+-
+-
 Cemu Hook 1.25.1+ Only (v0.5.7.7)
 https://files.sshnuke.net/cemuhook_1262d_0577.zip
 cemuhook_1262d_0577.zip
@@ -69,6 +79,16 @@ extract-zip
 -
 -
 All versions
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-----------------------------------
 -
 -
 -
